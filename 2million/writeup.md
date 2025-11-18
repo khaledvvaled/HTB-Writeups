@@ -22,15 +22,23 @@ This flaw breaks the intended access‑control design and exposes internal funct
 
 ## Steps to Reproduce
 1.Enumerated all accessible URLs using Katana, Wayback, and GoSpider, then consolidated the output into a single file.
+
 2.Extracted all JavaScript endpoints from the collected URLs and stored them separately in java.txt.
+
 3.Identified and manually reviewed a key script at: http://2million.htb/js/inviteapi.min.js
+
 4.Deobfuscated the Obfuscated JavaScript, revealing two internal functions that exposed hidden API routes:
           verifyInviteCode(code) → /api/v1/invite/verify
           makeInviteCode() → /api/v1/invite/how/to/generate
+          
 5.Retrieved the undocumented API paths directly from the deobfuscated source.
+
 6.Sent a POST request to the generation endpoint, which returned an encoded message.
+
 7.Decoded the response (ROT13), revealing the correct invite‑generation URL.
+
 8.Called the resolved endpoint, which returned an encoded invite code.
+
 9.Decoded the invite code and obtained a valid invitation key without any form of authentication or access control.
 
 ### Request:
