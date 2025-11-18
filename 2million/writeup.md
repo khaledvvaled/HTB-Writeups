@@ -98,5 +98,6 @@ Reason: The vulnerability allows unauthenticated users to access internal invite
 
 ## Reporter
 Name: khaled waled
+
 Handle(github): khaledvvaled
 
