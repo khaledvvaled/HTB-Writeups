@@ -59,7 +59,16 @@ curl -X POST http://2million.htb/api/v1/invite/generate \
 
 ### Response:
 ```
-{"0":200,"success":1,"data":{"data":"Va beqre gb trarengr gur vaivgr pbqr, znxr n CBFG erdhrfg gb \/ncv\/i1\/vaivgr\/trarengr","enctype":"ROT13"},"hint":"Data is encrypted ... We should probbably check the encryption type in order to decrypt it..."}  
+{
+  "0": 200,
+  "success": 1,
+  "data": {
+    "data": "Va beqre gb trarengr gur vaivgr pbqr, znxr n CBFG erdhrfg gb /ncv/i1/vaivgr/trarengr",
+    "enctype": "ROT13"
+  },
+  "hint": "Data is encrypted ... We should probbably check the encryption type in order to decrypt it..."
+}
+
 
 ```
 <html>
@@ -71,7 +80,15 @@ curl -X POST http://2million.htb/api/v1/invite/generate \
 </html>
 
 ```
-{"0":200,"success":1,"data":{"code":"WkRJMlAtSk5LMlotN0xEWFgtMTQzUVU=","format":"encoded"}} 
+{
+  "0": 200,
+  "success": 1,
+  "data": {
+    "code": "WkRJMlAtSk5LMlotN0xEWFgtMTQzUVU=",
+    "format": "encoded"
+  }
+}
+
 
 ---
 
@@ -89,9 +106,13 @@ The vulnerability allows anyone to access hidden invite‑generation APIs and cr
 
 ## Recommendation (Fix)
 -Restrict access to all invite‑related API endpoints by requiring proper authentication and authorization.
+
 -Avoid exposing internal API routes inside client‑side JavaScript files.
+
 -Implement server‑side validation to ensure that invite generation cannot occur without a valid, authenticated session.
+
 -Remove or obfuscate sensitive logic from public JavaScript and avoid returning encoded hints that can be easily decoded.
+
 -Monitor and rate‑limit requests to prevent automated enumeration or abuse.
 
 ---
