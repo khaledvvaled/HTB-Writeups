@@ -51,7 +51,6 @@ curl -X POST http://2million.htb/api/v1/invite/how/to/generate \
 curl -X POST http://2million.htb/api/v1/invite/how/to/verify \
      -H "Content-Type: application/json" \
      -d '{"code":"MYTESTCODE"}'
-
 ```
 curl -X POST http://2million.htb/api/v1/invite/generate \ 
      -H "Content-Type: application/json" \
