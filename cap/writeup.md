@@ -60,7 +60,7 @@ The IDOR vulnerability allowed attackers to download PCAP files belonging to oth
 ---
 
 ## Affected Endpoint(s)
-- [/data/<id>]
+- [/data/id]
 - [/capture]
  
 
