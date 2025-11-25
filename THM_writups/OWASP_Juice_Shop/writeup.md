@@ -37,7 +37,7 @@ to successfully trigger a DOM‑Based Reflected XSS.
 ```
 <iframe src="javascript:alert('xss')">
 ```
-<u>test</u>
+" <u>test</u> "
 ```
 
 ## Impact
