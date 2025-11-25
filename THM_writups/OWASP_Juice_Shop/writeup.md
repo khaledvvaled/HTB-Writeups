@@ -37,8 +37,6 @@ to successfully trigger a DOM‑Based Reflected XSS.
 ```
 <iframe src="javascript:alert('xss')">
 ```
-" <u>test</u> "
-```
 
 ## Impact
 The vulnerabilities identified in the application pose a high security risk due to the combination of broken authentication, improper access control, and multiple XSS flaws. By exploiting an SQL Injection (' OR 1=1 --) in the login form, an attacker can completely bypass the authentication mechanism and gain unauthorized access to the admin account. This compromises the entire application’s trust model, as the attacker can now perform privileged actions intended only for administrators.
